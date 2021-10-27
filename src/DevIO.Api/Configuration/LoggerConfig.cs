@@ -17,12 +17,12 @@ namespace DevIO.Api.Configuration
 
             services.AddElmahIo(credentials =>
             {
-                credentials.ApiKey = "c3e072b8cba9488c82c01be413900b49";
-                credentials.LogId = new Guid("89519617-7d4a-4a54-b392-1f32ca874459");
+                credentials.ApiKey = "";
+                credentials.LogId = new Guid("");
             });
 
             services.AddHealthChecks()
-                .AddElmahIoPublisher("c3e072b8cba9488c82c01be413900b49", new Guid("89519617-7d4a-4a54-b392-1f32ca874459", "API - Banco de Dados"))
+                .AddElmahIoPublisher("", new Guid(""))
                 .AddSqlServer(configuration.GetConnectionString("DefaultConnection"), name: "BancoSQL");
 
             services.AddHealthChecksUI();
