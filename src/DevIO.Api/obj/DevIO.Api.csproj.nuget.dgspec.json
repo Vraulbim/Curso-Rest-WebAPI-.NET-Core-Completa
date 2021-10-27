@@ -50,9 +50,29 @@
         "netcoreapp2.2": {
           "targetAlias": "netcoreapp2.2",
           "dependencies": {
+            "AspNetCore.HealthChecks.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "AspNetCore.HealthChecks.UI": {
+              "target": "Package",
+              "version": "[2.2.28, )"
+            },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[6.1.0, )"
+            },
+            "Elmah.Io.AspNetCore": {
+              "target": "Package",
+              "version": "[3.6.63, )"
+            },
+            "Elmah.Io.AspNetCore.HealthChecks": {
+              "target": "Package",
+              "version": "[3.7.86, )"
+            },
+            "Elmah.Io.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.4.38, )"
             },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",

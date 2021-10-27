@@ -1,13 +1,15 @@
 ﻿using AutoMapper;
 using DevIO.Api.Configuration;
+using DevIO.Api.Extensions;
 using DevIO.Data.Context;
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Swashbuckle.AspNetCore.Swagger;
 
 namespace DevIO.Api
 {
@@ -35,6 +37,8 @@ namespace DevIO.Api
 
             services.AddSwaggerConfig();
 
+            services.AddLoggingConfiguration(Configuration);
+
             services.ResolveDependencies();
         }
 
@@ -53,7 +57,11 @@ namespace DevIO.Api
 
             app.UseAuthentication();
 
+            app.UseMiddleware<ExceptionMiddleware>();
+
             app.UseMvcConfiguration();
+
+            app.UseLoggingConfiguration();
 
             app.UseSwaggerConfig(provider);
         }

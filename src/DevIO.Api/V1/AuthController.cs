@@ -5,6 +5,7 @@ using DevIO.Business.Intefaces;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -24,16 +25,19 @@ namespace DevIO.Api.V1.Controllers
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly AppSettings _appSettings;
+        private readonly ILogger _logger;
 
         public AuthController(SignInManager<IdentityUser> signInManager,
                               UserManager<IdentityUser> userManager,
                               IOptions<AppSettings> appSettings,
+                              ILogger<AuthController> logger,
                               INotificador notificator, 
                               IUser user): base(notificator, user)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _appSettings = appSettings.Value;
+            _logger = logger;
         }
 
         [EnableCors("Development")]
@@ -75,6 +79,7 @@ namespace DevIO.Api.V1.Controllers
 
             if (result.Succeeded)
             {
+                _logger.LogInformation("Usuário " + loginUser.Email + " logado com sucesso!");
                 return CustomResponse( await GerarJWT(loginUser.Email));
             }
             if (result.IsLockedOut)
