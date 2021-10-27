@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wS10POtLI5jilwFkDnQD59dRsEhFC2btfzPnqlDsbq4gJwNwSGt2GxzzahhpoN1BE/nxt+SunVolen4ZI31ksQ==",
+  "dgSpecHash": "nnTOEuX2lsBL6ZuHre7ey0zoznL38DGXQAGf+6Hdq6Uo+sBTQi6jZtWg0F7g895MIgPJvKq3YndcJdInncFQgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Desenvolvimento\\Documents\\Cursos Ponto.Sys\\REST WebAPI\\MinhaAPICompleta\\src\\DevIO.Api\\DevIO.Api.csproj",
   "expectedPackageFiles": [
@@ -204,6 +204,10 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Desenvolvimento\\.nuget\\packages\\swashbuckle.aspnetcore\\4.0.1\\swashbuckle.aspnetcore.4.0.1.nupkg.sha512",
+    "C:\\Users\\Desenvolvimento\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\4.0.1\\swashbuckle.aspnetcore.swagger.4.0.1.nupkg.sha512",
+    "C:\\Users\\Desenvolvimento\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\4.0.1\\swashbuckle.aspnetcore.swaggergen.4.0.1.nupkg.sha512",
+    "C:\\Users\\Desenvolvimento\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\4.0.1\\swashbuckle.aspnetcore.swaggerui.4.0.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
